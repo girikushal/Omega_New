@@ -1,0 +1,128 @@
+/* how work section  */
+.howWrokWrap {
+  height: 100vh;
+
+  padding-top: 140px;
+  margin-bottom: 178px;
+}
+
+.lowerWeWork {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lowerWeWork .shapeDiv {
+  width: 170px;
+  height: 170px;
+  background-color: var(--primary-blue);
+  border-radius: 50%;
+  margin-right: 30px;
+  position: relative;
+  border: 10px solid #fff;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+/* .lowerWeWork .shapeDiv2 {
+  background-color: orange;
+}
+
+.lowerWeWork .shapeDiv3 {
+  background-color: orange;
+}
+
+.lowerWeWork .shapeDiv4 {
+  background-color: orange;
+}
+
+.lowerWeWork .shapeDiv5 {
+  background-color: orange;
+} */
+
+.lowerWeWork .shapeDiv::after {
+  content: "";
+  position: absolute;
+  background: #e3e8ff;
+  width: 100%;
+  height: 108px;
+  z-index: -1;
+}
+
+.lowerWeWork .shapeDiv::before {
+  content: "";
+  position: absolute;
+  /* background: #e3e8ff; */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #ffffff;
+  bottom: -18%;
+  left: 37%;
+}
+
+.lowerWeWork .shapeDiv:nth-child(even) {
+  margin-top: 90px;
+  background-color: orange;
+}
+
+.lowerWeWork .shapeDiv1::after,
+.lowerWeWork .shapeDiv3::after {
+  transform: skewY(38deg);
+  left: 66%;
+  top: 35%;
+}
+
+.shapeDiv.shapeDiv2::after,
+.shapeDiv.shapeDiv4::after {
+  position: absolute;
+  content: "";
+  transform: skewY(-30deg);
+  left: 66%;
+  top: -15%;
+}
+
+.shapeDiv.shapeDiv5 {
+  margin-right: 0;
+}
+
+.shapeDiv.shapeDiv5::after {
+  display: none;
+}
+
+.lowerWeWork .shapeDiv .iconWrap {
+  font-size: 80px;
+}
+
+.lowerWeWork .shapeDiv .iconWrap svg {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.lowerWeWork .shapeDiv img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.lowerWeWork .shapeDiv .content {
+  position: absolute;
+  top: 133%;
+  /* left: 20%; */
+}
+
+.lowerWeWork .shapeDiv .content::before {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-blue);
+  width: 15px;
+  height: 15px;
+  left: 46%;
+  border-radius: 50%;
+  top: -9%;
+}
+
+.lowerWeWork .shapeDiv:nth-child(even) .content::before {
+  background-color: orange;
+}

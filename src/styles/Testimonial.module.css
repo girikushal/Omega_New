@@ -1,0 +1,28 @@
+.testiCarouselWrap {
+  width: 70%;
+  margin: auto;
+}
+
+.carouselCaption {
+  position: unset;
+}
+
+.carouselCaption span {
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.carasolImgWrap {
+  background-color: #5bc5cf;
+  color: #fff;
+  display: inline-block;
+  padding: 19px 16px 12px;
+  border-radius: 50%;
+  font-size: 34px;
+  line-height: 34px;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}

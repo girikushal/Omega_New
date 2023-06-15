@@ -1,0 +1,63 @@
+.animationTop {
+  animation: animationTop 1s ease-in-out;
+}
+
+.animationTop2 {
+  animation: animationTop 1.5s ease-in-out;
+}
+
+.animationTop2::after {
+  z-index: -1;
+}
+
+.animationTop3 {
+  animation: animationTop 2s ease-in-out;
+}
+
+@keyframes animationTop {
+  0% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animationDown {
+  animation: animationDown 1s ease-in-out;
+}
+
+@keyframes animationDown {
+  0% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animationLeft {
+  animation: animationLeft 1s ease-in-out;
+}
+
+@keyframes animationLeft {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.animationRight {
+  animation: animationRight 1s ease-in-out;
+}
+
+@keyframes animationRight {
+  0% {
+    transform: translateX(120px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

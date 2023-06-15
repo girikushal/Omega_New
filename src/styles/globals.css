@@ -1,0 +1,512 @@
+:root {
+  --primary-orange: #f0521e;
+  --primary-blue: #003f7d;
+  --primary-gray: #bcbab5;
+  --button-color: #05a081;
+  --button-hover: #035c4a;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+}
+p {
+  font-family: "Karla", sans-serif;
+}
+
+/* global classes  */
+.sectionGap {
+  padding: 140px 0 100px;
+}
+
+.title {
+  font-family: "Jost", sans-serif;
+  letter-spacing: 2.8px;
+  margin-bottom: 16px;
+  color: var(--primary-orange);
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.subTitle {
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #000;
+}
+
+.desc {
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  color: #5f5f5f;
+}
+
+.buttonFill {
+  margin-top: 50px;
+}
+
+.buttonFill a {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 19px;
+  padding: 22px 60px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--primary-orange);
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonFill a:hover {
+  background-color: var(--button-color);
+}
+
+/* banner css section  */
+.BanMain {
+  background-image: url(../../public/banBack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+}
+
+.bancontWrap {
+  padding: 130px 15px 0;
+  position: relative;
+  z-index: 2;
+  /* height: 100vh; */
+}
+
+.bancontWrap .topLeft {
+  position: absolute;
+  top: 0;
+  width: 5%;
+  left: 0;
+  z-index: -1;
+  height: auto;
+  animation: scale 10s linear infinite;
+}
+
+.BanMain .topRight {
+  position: absolute;
+  top: 0;
+  width: 14%;
+  z-index: -1;
+  height: auto;
+  right: 0;
+
+  animation: scale 10s linear infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.BanMain .bottomLeft {
+  position: absolute;
+
+  width: 12%;
+
+  z-index: -1;
+  height: auto;
+  bottom: 0;
+  margin: 0;
+  left: 10%;
+}
+
+.bancontWrap .bantitle {
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.bancontWrap .banDesc {
+  font-size: 22px;
+  line-height: 32px;
+  color: #5f5f5f;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.bancontWrap .bantitle .banYellow {
+  position: relative;
+  display: inline-block;
+  color: var(--primary-blue);
+}
+
+.bancontWrap .bantitle .banYellow figure {
+  position: absolute;
+  bottom: -42px;
+}
+
+.bancontWrap .contactLinkWrap a {
+  text-decoration: none;
+  margin-right: 18px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 24px 55px;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  background-color: #05a081;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bancontWrap .contactLinkWrap a:nth-child(2) {
+  background-color: #fff;
+  color: #000;
+}
+
+.bancontWrap .contactLinkWrap a:hover {
+  background-color: #f0521e;
+  color: #fff;
+}
+
+.bancontWrap .rightFig {
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+  margin-bottom: 0;
+}
+
+.bancontWrap .rightFig .overlayImgFirst {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+
+  height: auto;
+  width: 43%;
+
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+  }
+
+  25% {
+    transform: rotate(90deg) translateY(-20px);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: rotate(180deg) translateY(-40px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(0px);
+    opacity: 1;
+  }
+}
+
+.bancontWrap .rightFig .overlayImgSecond {
+  position: absolute;
+  z-index: -1;
+  width: 75%;
+  height: auto;
+  bottom: 0;
+  right: 0;
+
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(-20px) translateX(30px);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-40px) translateX(50px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* About us section  */
+.aboutUsMain {
+  position: relative;
+}
+
+.aboutUsMain .imageContainer {
+  position: relative;
+  height: 100%;
+}
+
+.aboutUsMain .imageContainer figure {
+  width: 60%;
+}
+
+.aboutUsMain .imageContainer .img_one {
+  left: 50px;
+  top: 0;
+  position: absolute;
+}
+.aboutUsMain .imageContainer .img_two {
+  top: 230px;
+  left: 0px;
+  position: absolute;
+  border-right: 10px solid #fff;
+  border-top: 10px solid #fff;
+  z-index: 1;
+  border-radius: 10px;
+  width: 46%;
+}
+
+.aboutUsMain .imageContainer .img_three {
+  left: 264px;
+  top: 278px;
+  position: absolute;
+  width: 45%;
+}
+
+.aboutUsMain .aboutRight {
+  padding-left: 30px;
+}
+
+.aboutUsMain .aboutRight .descTitle {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+  /* color: var(--primary-blue); */
+  margin-top: 15px;
+  /* margin-bottom: 5px; */
+}
+
+.aboutUsMain .aboutBackImg {
+  position: absolute;
+  bottom: 0;
+  left: 390px;
+  z-index: -1;
+}
+
+/* .aboutUsMain .aboutBackImg img {
+  width: 100%;
+  height: auto;
+} */
+
+/* Our Service Section  */
+.serviceMainWrap {
+  background-image: url(../../public/send_message_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.serviceMainWrap .backImg {
+  position: absolute;
+  top: 4%;
+  right: 0%;
+  z-index: -1;
+  width: 5%;
+  height: auto;
+  margin: 0;
+  transform: rotate(180deg);
+}
+
+.serviceMainWrap .serviceListWrap {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.serviceMainWrap .serviceListWrap li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  color: #5f5f5f;
+  display: flex;
+  align-items: center;
+}
+.serviceMainWrap .serviceListWrap li span {
+  display: flex;
+  margin-right: 10px;
+  color: var(--button-color);
+}
+
+.serviceInWrap {
+  justify-content: space-around;
+}
+
+.serviceInWrap .serviceList {
+  width: 44%;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--primary-blue);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 35px 20px;
+  transition: 0.5s ease-in-out;
+
+  position: relative;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+
+  perspective: 1000px;
+}
+
+.serviceInWrap .serviceList:hover {
+}
+
+/* .serviceInWrap .serviceList:hover .serviceListIn {
+  transform: rotateY(180deg);
+} */
+
+/* .serviceInWrap .serviceList h3 {
+  font-size: 22px;
+  font-weight: 600;
+} */
+/* 
+.serviceInWrap .serviceList .serviceListIn {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 135px;
+}
+
+.serviceInWrap .serviceList .serviceListIn .serviceFront,
+.serviceInWrap .serviceList .serviceListIn .serviceBack {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.serviceInWrap .serviceList .serviceListIn .serviceFront {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.serviceInWrap .serviceList .serviceListIn .serviceBack {
+  transform: rotateY(180deg);
+  background-color: var(--primary-orange);
+  color: #fff;
+} */
+
+/* VA Calculator  */
+.vaCalc {
+  background-image: url(../../public/virtual_employee_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding: 100px 0 140px; */
+  position: relative;
+  z-index: 1;
+}
+
+.vaCalc .backImg {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: -1;
+  margin: 0;
+}
+
+.vaCalc .backImg2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  margin: 0;
+}
+
+.vaCalc .backImg3 {
+  position: absolute;
+  bottom: 10%;
+  left: 4%;
+  z-index: -1;
+  margin: 0;
+}
+
+.vaCalc .title {
+  color: #fff;
+}
+
+.vaCalc .subTitle {
+  color: #fff;
+}
+
+.vaCalc .desc {
+  color: #fff;
+}
+
+.parentBound {
+  border: 2px solid red;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  cursor: move;
+  color: black;
+  max-width: 215px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+  border: 1px solid red;
+  display: inline-block;
+  right: 0;
+}
+
+.box #handle {
+  background-color: orange;
+}

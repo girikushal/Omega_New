@@ -1,0 +1,141 @@
+.headWrap {
+  /* position: fixed; */
+  z-index: 2;
+  width: 100%;
+  /* background: #181515cf; */
+  padding: 0px 5px;
+  /* backdrop-filter: saturate(180%) blur(5px);
+  background: rgb(188 186 181 / 50%); */
+}
+
+.headWrap ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.menuWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navDrop .dropdown-menu {
+  background-color: var(--primary-blue) !important;
+}
+
+.inNav {
+  /* background-color: var(--primary-blue); */
+  text-align: end;
+  flex-grow: unset !important;
+  width: 81%;
+  padding-top: 10px;
+}
+
+.inNav a {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  margin-right: 10px;
+}
+
+.inNav a:hover {
+  color: var(--primary-orange);
+}
+
+.containerWrap {
+}
+
+.headWrap ul li a {
+  color: #000;
+  /* color: var(--primary-blue); */
+  font-size: 18px;
+  /* font-weight: 600; */
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.headWrap ul li a:hover {
+  color: var(--primary-orange);
+}
+
+.headWrap a {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 800;
+  /* width: 20%; */
+  /* padding: 5px 0px; */
+  z-index: 1;
+  /* letter-spacing: 2px; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: var(--primary-blue);
+}
+
+.logo img {
+  margin-left: 10px;
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  /* z-index: -2; */
+}
+
+@media (max-width: 1179px) {
+  .mid {
+    display: none;
+  }
+  .logo {
+    width: 10%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .logo {
+    width: 8%;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 15%;
+  }
+
+  .inNav a {
+    font-size: 30px;
+    line-height: 43px;
+  }
+}
+
+.headContactWrap a {
+  color: #fff;
+  /* font-size: 20px; */
+  line-height: 20px;
+}
+
+.headWrap .socialLinks {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.headWrap .contactNum {
+  margin-right: -5px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.contactNum svg {
+  /* margin-right: 10px; */
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Admin & Personal Assistant",
+    "iconUrl": "/meeting.png",
+    "desc": "Effortlessly manage your business and personal tasks with our dedicated Admin & Personal Assistant service. "
+  },
+  {
+    "id": 2,
+    "title": "Customer Support ",
+    "iconUrl": "/hiring.png",
+    "desc": "Enhance your customer support with our dedicated Customer Support Virtual Assistant service. "
+  },
+  {
+    "id": 3,
+    "title": "Recruitment Support ",
+    "iconUrl": "/telemarketer.png",
+    "desc": "Streamline your recruitment process with our dedicated Recruitment Support Virtual Assistant service. "
+  },
+  {
+    "id": 4,
+    "title": "Marketing & Social Media ",
+    "iconUrl": "/presentation.png",
+    "desc": "Take your digital marketing and social media efforts to the next level with our Digital Marketing Solutions."
+  }
+]

@@ -1,0 +1,72 @@
+/* pop pdf  */
+.ButtonWrap {
+  padding: 36px 20px 20px;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: fixed;
+  bottom: 0;
+  right: 12%;
+  z-index: 999;
+  animation: pop 0.8s cubic-bezier(0, 1.5, 1, 1.5);
+  backdrop-filter: blur(1.5px);
+  border-top-right-radius: 22px;
+  overflow: hidden;
+  border-top-left-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@keyframes pop {
+  0% {
+    bottom: -95px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px 9px;
+}
+
+.popForm {
+  padding: 20px;
+  text-align: center;
+}
+
+.popForm input,
+.popForm input:focus {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 50px;
+  border: none;
+  background-color: beige;
+  color: rgb(66, 63, 63);
+  font-size: 22px;
+}
+
+.popForm span {
+  font-size: 16px;
+  display: block;
+  color: red;
+  font-style: italic;
+  padding-left: 30px;
+  text-align: start;
+}
+
+.popForm button {
+  padding: 10px 30px;
+  border-radius: 22px;
+  color: #fff;
+  background-color: var(--button-color);
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
