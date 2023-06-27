@@ -7,25 +7,32 @@ import React, { useRef, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Service = () => {
-  const ref = useRef();
-  const { ref: inViewRef, inView } = useInView({
+  // const ref = useRef();
+  // const { ref: inViewRef, inView } = useInView({
+  //   triggerOnce: true,
+  // });
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [ref2, inView2] = useInView({
     triggerOnce: true,
   });
 
   // Use `useCallback` so we don't recreate the function on each render
-  const setRefs = useCallback(
-    (node) => {
-      // Ref's from useRef needs to have the node assigned to `current`
-      ref.current = node;
-      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
-      inViewRef(node);
-    },
-    [inViewRef]
-  );
+  // const setRefs = useCallback(
+  //   (node) => {
+  //     // Ref's from useRef needs to have the node assigned to `current`
+  //     ref.current = node;
+  //     // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+  //     inViewRef(node);
+  //   },
+  //   [inViewRef]
+  // );
 
   return (
-    <section ref={setRefs} className="serviceMainWrap sectionGap ">
-      <div className="container">
+    <section className="serviceMainWrap sectionGap ">
+      <div ref={ref} className="container">
         <div className="row flex-wrap align-items-center">
           <div
             className={`col-lg-6 col-md-6 col-sm-12 col-xs-12 ${
@@ -68,7 +75,7 @@ const Service = () => {
             </div>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div ref={ref2} className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="serviceInWrap d-flex flex-wrap">
               {serviceList.map((item, index) => {
                 return (
@@ -76,13 +83,13 @@ const Service = () => {
                     <HoverFlip
                       key={item.id}
                       clas={`imgWrap ${
-                        inView && index === 0
+                        inView2 && index === 0
                           ? "animationTop"
-                          : inView && index === 1
+                          : inView2 && index === 1
                           ? "animationTop2"
-                          : inView && index === 2
+                          : inView2 && index === 2
                           ? "animationTop3"
-                          : inView && index === 3
+                          : inView2 && index === 3
                           ? "animationTop3"
                           : ""
                       }`}
@@ -115,7 +122,11 @@ const Service = () => {
         </div>
       </div>
 
-      <figure className={`backImg ${inView ? "animationRight" : ""}`}>
+      {/* ${inView ? "animationRight" : ""} */}
+      <figure
+        className={`backImg 
+      `}
+      >
         <Image
           src="/send_message_left_icon.png"
           alt="send message icon"

@@ -29,7 +29,7 @@ const SendRequest = () => {
       <div ref={setRefs} className="container">
         <div className="row">
           <div
-            className={`col-lg-4 col-md-4 col-sm-12 col-xs-12 ${
+            className={`col-lg-4 col-md-4 col-sm-12 col-xs-12 reqLeft ${
               inView && "animationTop"
             }`}
           >
@@ -43,7 +43,7 @@ const SendRequest = () => {
                     <span className={styles.callIcon}>
                       <BsFillTelephoneFill />
                     </span>
-                    <Link href="tel:+44-(0) 2033369265">
+                    <Link className="desc" href="tel:+44-(0) 2033369265">
                       +44-(0) 2033369265 (UK)
                     </Link>
                   </div>

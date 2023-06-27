@@ -1,4 +1,4 @@
-.projectWrap {
+/* .projectWrap {
   background-color: #102b2e;
   overflow: hidden;
   background-image: url(../../public/projBack.jpg);
@@ -10,8 +10,7 @@
 .leftWrapmain {
   box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
     7px 0 11px -5px rgb(91 194 205);
-  /* padding: 140px calc(var(--bs-gutter-x) * 0.5) 100px
-    calc(var(--bs-gutter-x) * 0.5); */
+
   background-color: #fff;
   position: relative;
   z-index: 2;
@@ -59,4 +58,83 @@
   margin-bottom: 20px;
   padding: 15px;
   color: #b8d1d4;
+} */
+
+.projectWrap {
+  background-image: url(../../public/send_message_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.listContWrap {
+  /* border: 1px solid orange; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  position: relative;
+  background-color: #f9f7f7;
+  padding: 32px;
+  z-index: 1;
+}
+
+.listWrapDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listContWrap::after {
+  position: absolute;
+  content: "";
+  background: #ffa500;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 1%;
+  left: 0;
+  transition: 0.5s ease-in;
+}
+
+.listContWrap:hover:after {
+  width: 100%;
+}
+
+.listContWrap:hover {
+  cursor: pointer;
+}
+
+.listContWrap:hover h3,
+.listContWrap:hover p {
+  color: #fff;
+}
+
+.listWrapMain img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .listContWrap {
+    padding: 15px 20px;
+  }
+
+  .listContWrap h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .listContWrap {
+    padding: 15px 20px;
+  }
+
+  .listContWrap h3 {
+    font-size: 18px;
+  }
+
+  .listWrapDesc {
+    margin-top: 25px;
+
+    gap: 10px;
+  }
 }

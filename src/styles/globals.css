@@ -18,8 +18,11 @@ h5,
 h6 {
   font-family: "Jost", sans-serif;
 }
-p {
-  font-family: "Karla", sans-serif;
+p,
+ul,
+a,
+input {
+  font-family: "Karla", sans-serif !important;
 }
 
 /* global classes  */
@@ -76,14 +79,75 @@ p {
   background-color: var(--button-color);
 }
 
+.scrTN {
+  visibility: hidden;
+  opacity: 0;
+  /* transition: visibility 5s, opacity 8s linear; */
+  position: fixed;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: btnClose 0.5s ease-in-out;
+  z-index: 999;
+}
+
+@keyframes btnClose {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -10%;
+  }
+}
+
+.scrT {
+  position: fixed;
+  bottom: 22%;
+  width: 50px;
+  height: 50px;
+  background: #ffa500;
+  right: 0;
+  border-radius: 50%;
+  z-index: 999;
+  margin-right: 10px;
+  border: none;
+  animation: btnOpen 0.5s ease-in-out;
+  box-shadow: 0px 0px 0px 5px #ffa50078;
+}
+
+.scrT:hover {
+  transition: 0.5s;
+  box-shadow: 0px 0px 0px 5px #d3a041;
+}
+
+.scrT svg {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  color: #fff;
+}
+
+@keyframes btnOpen {
+  0% {
+    right: -10%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
 /* banner css section  */
 .BanMain {
   background-image: url(../../public/banBack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .bancontWrap {
@@ -166,6 +230,7 @@ p {
 .bancontWrap .bantitle .banYellow figure {
   position: absolute;
   bottom: -42px;
+  z-index: -1;
 }
 
 .bancontWrap .contactLinkWrap a {
@@ -282,12 +347,12 @@ p {
 }
 
 .aboutUsMain .imageContainer .img_one {
-  left: 50px;
+  left: 11%;
   top: 0;
   position: absolute;
 }
 .aboutUsMain .imageContainer .img_two {
-  top: 230px;
+  top: 45%;
   left: 0px;
   position: absolute;
   border-right: 10px solid #fff;
@@ -298,8 +363,8 @@ p {
 }
 
 .aboutUsMain .imageContainer .img_three {
-  left: 264px;
-  top: 278px;
+  left: 47%;
+  top: 57%;
   position: absolute;
   width: 45%;
 }
@@ -317,10 +382,13 @@ p {
   /* margin-bottom: 5px; */
 }
 
-.aboutUsMain .aboutBackImg {
+.aboutUsMain .aboutBackImg img {
   position: absolute;
   bottom: 0;
-  left: 390px;
+  left: 0;
+  right: 0;
+  width: 83%;
+  height: auto;
   z-index: -1;
 }
 
@@ -509,4 +577,202 @@ p {
 
 .box #handle {
   background-color: orange;
+}
+
+/* project section  */
+
+.projectSection .carousel-control-next,
+.projectSection .carousel-control-prev {
+  height: fit-content;
+  background: #fff;
+  padding: 13px;
+  width: fit-content;
+  color: #ffa500;
+  font-size: 25px;
+  opacity: 1;
+  bottom: 10%;
+  top: unset;
+  margin-left: 10px;
+}
+
+.projectSection .carousel-control-next:hover,
+.projectSection .carousel-control-prev:hover {
+  color: #fff;
+  background-color: #ffa500;
+}
+
+.projectSection .carousel-control-next {
+  left: 10%;
+}
+
+.PrjActiveDes::after {
+  width: 100% !important;
+}
+
+.PrjActiveDes h3,
+.PrjActiveDes p {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .aboutUsMain .aboutRight .descTitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .subTitle {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sectionGap {
+    padding: 80px 0 50px;
+  }
+
+  .buttonFill a {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 45px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .bancontWrap {
+    padding: 25px 15px 0px;
+  }
+
+  .bancontWrap .bantitle {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .bancontWrap .banDesc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .bancontWrap .contactLinkWrap a {
+    text-decoration: none;
+    margin-right: 18px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 11px 26px;
+  }
+
+  .bancontWrap .rightFig {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .aboutUsMain .imageContainer .img_one {
+    left: 11%;
+    top: 0;
+    position: absolute;
+    width: 80%;
+  }
+  .aboutUsMain .imageContainer .img_two {
+    top: 39%;
+    left: 0px;
+
+    width: 60%;
+  }
+
+  .aboutUsMain .imageContainer .img_three {
+    left: 62%;
+    top: 50%;
+    position: absolute;
+    width: 48%;
+  }
+}
+
+@media (max-width: 767px) {
+  .buttonFill {
+    margin-top: 25px;
+  }
+
+  .sectionGap {
+    padding: 50px 0 50px;
+  }
+
+  .bancontWrap {
+    padding: 105px 15px 25px;
+  }
+  .bancontWrap .bantitle {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .bancontWrap .banDesc {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .bancontWrap .contactLinkWrap a {
+    margin-right: 0;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px 20px;
+  }
+
+  .bancontWrap .rightFig {
+    z-index: -1;
+  }
+
+  .bancontWrap .rightFig .main-img {
+    display: none;
+  }
+
+  .bancontWrap .rightFig .overlayImgSecond {
+    width: 58%;
+  }
+
+  .aboutUsMain .aboutRight {
+    padding-left: 0px;
+  }
+
+  .aboutUsMain .left {
+    margin-top: 20px;
+    order: 2;
+  }
+
+  .aboutUsMain .imageContainer .img_one {
+    position: unset;
+    width: 64%;
+    margin: auto;
+  }
+  .aboutUsMain .imageContainer .img_two {
+    position: unset;
+    width: 53%;
+  }
+
+  .aboutUsMain .imageContainer .img_three {
+    left: 53%;
+    top: 46%;
+    position: absolute;
+    width: 43%;
+    bottom: 0;
+    border: 7px solid #fff;
+    border-radius: 12px;
+  }
+
+  .serviceInWrap {
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+
+  .vaCalc .right {
+    margin-top: 25px;
+  }
+
+  .vaCalc .backImg3 {
+    display: none;
+  }
 }

@@ -4,24 +4,19 @@ import React, { useRef, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 
 const AboutUs = () => {
-  const ref = useRef();
-  const { ref: inViewRef, inView } = useInView({
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
     triggerOnce: true,
   });
 
-  const setRefs = useCallback(
-    (node) => {
-      ref.current = node;
-      inViewRef(node);
-    },
-    [inViewRef]
-  );
-
   return (
-    <section ref={setRefs} className="aboutUsMain sectionGap">
+    <section ref={ref} className="aboutUsMain sectionGap">
       <div className="container">
-        <div className="row mb-5">
-          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div className="row">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
             <div className="imageContainer">
               <figure className={`mb-0 img_one ${inView && "animationTop"}`}>
                 <Image
@@ -58,7 +53,7 @@ const AboutUs = () => {
               inView && "animationRight"
             }`}
           >
-            <div className="aboutRight">
+            <div className="aboutRight ">
               <h6 className="title">About Us</h6>
               <h2 className="subTitle">
                 Say Goodbye to Overwhelm: Our Virtual Assistants Bring Ease and
@@ -82,7 +77,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <figure className="aboutBackImg">
+        <figure className={`aboutBackImg mb-0 ${inView && "animationLeft"}`}>
           <Image
             src="/aboutus_shape.png"
             alt="aboutusImage"

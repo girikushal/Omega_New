@@ -60,17 +60,20 @@ const Header = () => {
             <Navbar.Brand className={styles.logo}>
               {/* OMEGA<span>BPO</span> */}
               <Image
-                src="/logo.png"
+                src="/obpoLogo.webp"
                 alt="omegaLogo"
-                width={180}
-                height={180}
+                width={80}
+                height={80}
                 priority={true}
                 className="img-fluid"
               />
             </Navbar.Brand>
           </Link>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className={styles.toggleBtn}
+          />
 
           <Navbar.Collapse id="responsive-navbar-nav" className={styles.inNav}>
             <Nav className="me-auto">
@@ -78,11 +81,19 @@ const Header = () => {
                 <Nav.Link>Home</Nav.Link>
               </Link>
 
-              <Link href="/about" passHref legacyBehavior>
+              <Link href="/services" passHref legacyBehavior>
+                <Nav.Link>Services</Nav.Link>
+              </Link>
+
+              <Link href="/about-us" passHref legacyBehavior>
                 <Nav.Link>About Us</Nav.Link>
               </Link>
 
-              <NavDropdown
+              <Link href="/careers" passHref legacyBehavior>
+                <Nav.Link>Career</Nav.Link>
+              </Link>
+
+              {/* <NavDropdown
                 title="Services"
                 id="collasible-nav-dropdown"
                 show={show}
@@ -106,27 +117,17 @@ const Header = () => {
                     <NavDropdown.Item>Outsourcing Talent</NavDropdown.Item>
                   </Link>
                 </div>
-              </NavDropdown>
-              <Link href="/contact" passHref legacyBehavior>
+              </NavDropdown> */}
+              <Link href="/contact-us" passHref legacyBehavior>
                 <Nav.Link>Contact Us</Nav.Link>
               </Link>
             </Nav>
 
-            <Nav className={styles.headContactWrap}>
-              <Link
-                href="tel: +44-(0) 2033369265"
-                className={styles.contactNum}
-              >
-                <BsHeadphones />
-              </Link>
-
-              <Link
-                href="tel: +44-(0) 2033369265"
-                passHref
-                legacyBehavior
-                // className={styles.contactNum}
-              >
-                <Nav.Link>+44-(0) 2033369262 (UK)</Nav.Link>
+            <div className={styles.headContactWrap}>
+              <Link href="tel: +44-(0) 2033369265" passHref legacyBehavior>
+                <Nav.Link className={styles.contactNum}>
+                  <BsHeadphones /> +44-(0) 2033369262 (UK)
+                </Nav.Link>
               </Link>
 
               <ul className={styles.socialLinks}>
@@ -170,7 +171,7 @@ const Header = () => {
                   </li>
                 </Link>
               </ul>
-            </Nav>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

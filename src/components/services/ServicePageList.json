@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Admin & Personal Assistant",
+    "desc": "Easily handle all your work and personal tasks with our complete administrative and personal assistant services. ",
+    "descList": [
+      "Comprehensive administrative support: organizing schedules, managing emails, handling documentation.",
+      "Personalized assistance for personal errands, travel arrangements, event planning.",
+      "Task management and organization to boost productivity and efficiency.",
+      "Event coordination and planning for seamless conferences or meetings.",
+      "Confidential handling of sensitive information and data.",
+      "Managing personal finances, organizing appointments, handling correspondence."
+    ],
+    "imgurl": "/marketing_socialmedia_image.png",
+    "iconUrl": "/marketing_socialmedia_logo_image.png"
+  },
+
+  {
+    "id": 2,
+    "title": "Customer Support",
+    "desc": "Provide outstanding customer service and make your customers happy with our specialized customer support virtual assistant services. ",
+    "descList": [
+      "Prompt and professional customer service via multiple channels (phone, email, chat).",
+      "Order processing, tracking, and delivery coordination.",
+      "Building and maintaining customer relationships through personalized engagement.",
+      "Creating and maintaining a knowledge base or FAQ section.",
+      "Conducting customer satisfaction surveys and gathering feedback.",
+      "Resolving inquiries, complaints, and providing effective solutions."
+    ],
+    "imgurl": "/marketing_socialmedia_image.png",
+    "iconUrl": "/marketing_socialmedia_logo_image.png"
+  },
+
+  {
+    "id": 3,
+    "title": "Recruitment Support",
+    "desc": "Make your hiring process easier and find the perfect candidates with our complete recruitment support virtual assistant services.",
+    "descList": [
+      "End-to-end recruitment assistance: job posting, resume screening, candidate shortlisting.",
+      "Coordinating interviews: scheduling, reminders, feedback collection.",
+      "Background checks and reference verifications for reliable hiring decisions.",
+      "Onboarding support for new employees: documentation, orientation.",
+      "Streamlining recruitment processes and improving efficiency.",
+      "Ensuring compliance with hiring regulations and industry standards."
+    ],
+    "imgurl": "/marketing_socialmedia_image.png",
+    "iconUrl": "/marketing_socialmedia_logo_image.png"
+  },
+
+  {
+    "id": 4,
+    "title": "Digital Marketing",
+    "desc": "Improve your online presence and connect with your audience through our effective digital marketing virtual assistant solutions.",
+    "descList": [
+      "Social media management: content creation, scheduling, engagement.",
+      "Search engine optimization (SEO) strategies for improved online visibility.",
+      "Web development and e-commerce development services for a seamless online experience.",
+      "Website management and optimization for enhanced online presence.",
+      "Visually appealing graphics design services to enhance marketing materials and brand image.",
+      "Developing and implementing digital marketing campaigns for brand awareness."
+    ],
+    "imgurl": "/marketing_socialmedia_image.png",
+    "iconUrl": "/marketing_socialmedia_logo_image.png"
+  }
+]

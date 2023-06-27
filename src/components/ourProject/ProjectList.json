@@ -2,31 +2,19 @@
   {
     "id": 1,
     "title": "Lorem ipsum dolor sit.",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in."
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in.",
+    "imgUrl": "/project-style1.jpg"
   },
   {
     "id": 2,
-    "title": "Lorem ipsum dolor sit.",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in."
+    "title": "one Lorem ipsum dolor sit.",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in.",
+    "imgUrl": "/project-style2.jpg"
   },
   {
     "id": 3,
-    "title": "Lorem ipsum dolor sit.",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in."
-  },
-  {
-    "id": 4,
-    "title": "Lorem ipsum dolor sit.",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in."
-  },
-  {
-    "id": 5,
-    "title": "Lorem ipsum dolor sit.",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in."
-  },
-  {
-    "id": 6,
-    "title": "Lorem ipsum dolor sit.",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in."
+    "title": "two Lorem ipsum dolor sit.",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in.",
+    "imgUrl": "/project-style3.jpg"
   }
 ]

@@ -10,9 +10,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 140px 0;
+
   position: relative;
   z-index: 1;
+}
+
+.sendReqWrap .reqLeft {
+  min-height: 270px;
+  margin-bottom: 33px;
 }
 
 .sendReqWrap .backImg {
@@ -159,4 +164,15 @@
 }
 .formWrap .buttonWrap button:hover {
   background-color: var(--primary-orange);
+}
+
+@media (max-width: 767px) {
+  .sendReqWrap .contactInfo {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .formWrap .inputWrap {
+    width: 100%;
+  }
 }

@@ -3,6 +3,9 @@ import "@/styles/flipHover.css";
 import "@/styles/animation.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
+import ScrollTop from "@/components/scrollTop/ScrollTop";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,7 +18,10 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+      <Header />
+      <ScrollTop />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
