@@ -1,0 +1,56 @@
+.overlayContainer {
+  background-color: #f89623;
+  position: absolute;
+
+  height: 180px;
+  width: 180px;
+  line-height: 180px;
+  left: 43%;
+  top: 35%;
+  text-align: center;
+  z-index: 1;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.overlayContainer p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+
+.boxAbsoulte {
+  position: absolute;
+  left: 42%;
+  top: 34%;
+  z-index: 0;
+  width: fit-content;
+}
+
+@media (max-width: 767px) {
+  .overlayContainer {
+    width: 150px;
+    height: 150px;
+    left: 10%;
+    top: 35%;
+  }
+
+  .overlayContainer p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .boxAbsoulte {
+    left: 5%;
+    top: 32%;
+  }
+
+  .marginPhone {
+    margin-bottom: 30px;
+  }
+}

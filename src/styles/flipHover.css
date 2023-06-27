@@ -23,6 +23,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  text-align: center;
 }
 
 .leftWrap .leftFrontWrap,
@@ -134,4 +135,37 @@
 .serviceMainWrap .leftWrap h3 {
   font-size: 22px;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .leftWrap .leftFrontWrap,
+  .leftWrap .leftBackWrap {
+    padding: 105px 10px 98px;
+  }
+}
+
+@media (max-width: 991px) {
+  .serviceMainWrap .leftWrap .leftFrontWrap,
+  .serviceMainWrap .leftWrap .leftBackWrap {
+    padding: 21px 5px 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .serviceMainWrap .leftWrap {
+    width: 47%;
+    margin-bottom: 20px;
+  }
+
+  .leftWrap .leftFrontWrap,
+  .leftWrap .leftBackWrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .sidesWrap {
+    min-height: 300px;
+    margin-bottom: 30px;
+  }
 }

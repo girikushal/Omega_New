@@ -5,27 +5,34 @@ import Header from "../header/Header";
 import Link from "next/link";
 
 const Banner = () => {
-  const ref = useRef();
-  const { ref: inViewRef, inView } = useInView({
+  // const ref = useRef();
+  // const { ref: inViewRef, inView } = useInView({
+  //   triggerOnce: true,
+  // });
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const [ref2, inView2] = useInView({
     triggerOnce: true,
   });
 
   // Use `useCallback` so we don't recreate the function on each render
-  const setRefs = useCallback(
-    (node) => {
-      // Ref's from useRef needs to have the node assigned to `current`
-      ref.current = node;
-      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
-      inViewRef(node);
-    },
-    [inViewRef]
-  );
+  // const setRefs = useCallback(
+  //   (node) => {
+  //     // Ref's from useRef needs to have the node assigned to `current`
+  //     ref.current = node;
+  //     // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+  //     inViewRef(node);
+  //   },
+  //   [inViewRef]
+  // );
 
   return (
-    <section ref={setRefs} className="BanMain">
-      <div className="headerWrap">
+    <section ref={ref} className="BanMain">
+      {/* <div className="headerWrap">
         <Header />
-      </div>
+      </div> */}
       <div className="bancontWrap  ">
         <div className="container-fluid">
           <div className="row">
@@ -35,7 +42,10 @@ const Banner = () => {
                 <span className="d-block">
                   {" "}
                   <span className="banYellow">
-                    <figure>
+                    <figure
+                      ref={ref2}
+                      className={inView2 ? "animationTop" : ""}
+                    >
                       <Image
                         src="/banYellow.png"
                         alt="banYellow"
@@ -66,7 +76,7 @@ const Banner = () => {
                   alt="banner_right_image"
                   width={500}
                   height={500}
-                  className="img-fluid animationRight"
+                  className="img-fluid main-img animationRight"
                 />
                 <div className="overlayImgFirst animationTop">
                   <Image

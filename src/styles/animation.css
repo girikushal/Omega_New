@@ -61,3 +61,144 @@
     transform: translateX(0px);
   }
 }
+
+/* how it works animations  */
+.hwAnimationTop1 {
+  animation: hwanimationTop 2s linear;
+}
+
+.hwAnimationTop2 {
+  animation: hwanimationDown 2.5s linear;
+}
+
+.hwAnimationTopafter {
+  animation: hwanimationTopafter 7s linear;
+}
+
+@keyframes hwanimationTopafter {
+  0% {
+    /* transform: translateY(150px); */
+    opacity: 0;
+    width: 0%;
+  }
+
+  50% {
+    /* transform: translateY(75px); */
+    /* opacity: 0; */
+    width: 50%;
+  }
+  100% {
+    /* transform: translateY(0px); */
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.hwAnimationTop3 {
+  animation: hwanimationTop 3s linear;
+}
+
+.hwAnimationTop4 {
+  animation: hwanimationDown 3.5s linear;
+}
+
+.hwAnimationTop5 {
+  animation: hwanimationTop 4s linear;
+}
+
+@keyframes hwanimationTop {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(75px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes hwanimationDown {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-75px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* drop Animation  */
+.dropanimation {
+  /* -webkit-animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  /* animation-delay: 4s; */
+  animation-duration: 5s;
+  animation-name: bounce;
+  /* animation-iteration-count: infinite; */
+  /* margin-left: -100px; */
+  position: absolute;
+  left: 44%;
+  top: -26%;
+  animation-timing-function: ease-in-out;
+  /* background: radial-gradient(farthest-corner at 60px 45px, #aaa 0%, black 50%); */
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes bounce {
+  0% {
+    top: -38%;
+  }
+
+  50% {
+    top: -15%;
+  }
+
+  100% {
+    top: -26%;
+  }
+}
+/* 
+.dropanimation::before {
+  animation-direction: alternate;
+  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-name: bounceDrop;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+@keyframes bounceDrop {
+  0% {
+    top: -38%;
+    opacity: 1;
+  }
+
+  50% {
+    top: -15%;
+    opacity: 0;
+  }
+
+  100% {
+    top: -32%;
+    opacity: 0;
+  }
+} */
+
+@media (max-width: 767px) {
+  .hwAnimationTopafter {
+    animation: hwanimationTopafter 3s linear;
+  }
+}

@@ -1,9 +1,9 @@
 .footerWrap {
   /* background-color: #102b2e; */
-  background-color: var(--primary-gray);
+  background-color: #439aa5;
   position: relative;
   padding: 45px 0 0px;
-  color: #000;
+  color: #fff;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -17,7 +17,7 @@
   font-size: 18px;
   line-height: 32px;
   font-weight: 500;
-  color: #000;
+  color: #fff;
   transition: 0.3s ease-in-out;
 }
 
@@ -26,10 +26,9 @@
 }
 
 .footerWrap .lowerSection {
-  /* text-align: center; */
   padding: 15px 0;
-  border-top: 2px solid var(--primary-orange);
-  background-color: var(--primary-blue);
+  border-top: 2px solid #f0521e;
+  background-color: #439aa5;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -61,7 +60,7 @@
   font-size: 22px;
   margin-right: 20px;
   line-height: 40px;
-  color: #05a081;
+  color: #fff;
 }
 
 .socialLinks {
@@ -98,4 +97,11 @@
   padding-top: 45px;
   position: relative;
   padding-bottom: 44px;
+}
+
+.logoRight {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  opacity: 0.2;
 }

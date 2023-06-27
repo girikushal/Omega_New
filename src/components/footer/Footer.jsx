@@ -109,6 +109,16 @@ const Footer = () => {
                 {/* social media  */}
               </div>
             </div>
+
+            <figure className={`mb-0 ${styles.logoRight}`}>
+              <Image
+                src="/footer_logo.png"
+                alt="logo footer"
+                width={200}
+                height={200}
+                className="img-fluid"
+              />
+            </figure>
           </div>
         </div>
         <div className={styles.lowerSection}>

@@ -1,0 +1,69 @@
+.subBanWrap {
+  padding: 150px 15px 50px;
+  position: relative;
+  z-index: 2;
+
+  background-image: url(../../public/banBack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.bantitle {
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.banYellow {
+  position: relative;
+  display: inline-block;
+  /* color: var(--primary-blue); */
+}
+.banYellow figure {
+  position: absolute;
+  bottom: -42px;
+  z-index: -1;
+}
+
+.banDesc {
+  font-size: 22px;
+  line-height: 32px;
+  color: #5f5f5f;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.rightImg img {
+  margin-top: -35px;
+}
+
+.pathWrap {
+  background-color: #fff;
+  border-radius: 22px;
+  padding: 18px 41px;
+  display: inline-block;
+}
+
+.pathWrap h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .rightImg img {
+    margin-top: 20px;
+  }
+
+  .subBanWrap {
+    padding: 105px 15px 50px;
+  }
+}

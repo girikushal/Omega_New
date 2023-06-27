@@ -13,6 +13,8 @@ import Blog from "@/components/blog/Blog";
 import OurProject from "@/components/ourProject/OurProject";
 import PdfDownload from "@/components/pdfDownload/PdfDownload";
 import HowWorks from "@/components/howItWorks/HowWorks";
+import ScrollTop from "@/components/scrollTop/ScrollTop";
+import Header from "@/components/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +28,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        {/* <Header /> */}
         <Banner />
+
         <PdfDownload />
         <AboutUs />
         <Service />
@@ -36,7 +40,6 @@ export default function Home() {
         <OurProject />
         <SendRequest />
         <Blog />
-        <Footer />
       </main>
     </>
   );
