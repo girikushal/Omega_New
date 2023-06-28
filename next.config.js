@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
 
-module.exports = nextConfig
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // require("./scripts/sitemap-generator.js");
+      require("./scripts/sitemap-generator");
+    }
+    return config;
+  },
+};
+
+module.exports = nextConfig;

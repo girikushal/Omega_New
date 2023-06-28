@@ -40,6 +40,7 @@ const Blog = () => {
             {blogList.map((item, index) => {
               return (
                 <Link
+                  key={item.id}
                   href="/"
                   className={`${styles.listIn} ${
                     inView && index === 0

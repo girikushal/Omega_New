@@ -32,7 +32,7 @@ const services = () => {
       <section className={styles.listContWrap}>
         {serviceList.map((item, index) => {
           return (
-            <div ref={ref2} className={`${styles.listWrap} `}>
+            <div ref={ref2} key={item.id} className={`${styles.listWrap} `}>
               <div className="container sectionGap">
                 <div className="row align-items-center justify-content-between">
                   <div

@@ -29,7 +29,7 @@ const OurProject = () => {
   const [activeIndex, setActiveIndex] = useState();
 
   const activeFunc = (selectedIndex) => {
-    console.log("Active indev", selectedIndex);
+    // console.log("Active indev", selectedIndex);
     setActiveIndex(selectedIndex);
   };
 
