@@ -93,6 +93,10 @@ const Header = () => {
                 <Nav.Link>Career</Nav.Link>
               </Link>
 
+              <Link href="/pricing-plan" passHref legacyBehavior>
+                <Nav.Link>Pricing Plan</Nav.Link>
+              </Link>
+
               {/* <NavDropdown
                 title="Services"
                 id="collasible-nav-dropdown"
