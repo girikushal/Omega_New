@@ -3,65 +3,123 @@ import styles from "@/styles/ServicePage.module.css";
 import Image from "next/image";
 
 const Calculator = () => {
-  //   const resources= [
-  //     { typeOfValue: 0, text: "Select" },
-  //     { typeOfValue: 600, text: "Bookkeeping" },
-  //     { typeOfValue: 600, text: "Business Development" },
-  //     { typeOfValue: 91, text: "Sales Support" },
-  //   ];
+  const [bookkeeping, setBookkeeping] = useState(["600", "800", "1000"]);
+  const [businessDevelopment, setBusinessDevelopment] = useState([
+    "600",
+    "100",
+    "1600",
+  ]);
+  const [customerService, setCustomerService] = useState(["500", "650", "800"]);
 
-  const resources = [
-    { typeOfValue: "", text: "Select" },
-    { typeOfValue: "Book keeping", text: "Bookkeeping" },
-    { typeOfValue: "Business Development", text: "Business Development" },
-    { typeOfValue: "Customer Service ", text: "Customer Service " },
-    { typeOfValue: "Digital Marketing ", text: "Digital Marketing " },
-    { typeOfValue: "Graphic Design", text: "Graphic Design" },
-    { typeOfValue: "HumanResources", text: "Human Resources" },
-  ];
+  // const [resourceValue, setResourceValue] = useState("");
+  const [resVal, setResVal] = useState("");
+  // const [skillValue, setSkillValue] = useState("");
 
-  //   const SkillLevel = [
-  //     { skillValue: 0, text: "Select" },
-  //     { skillValue: 3, text: "Beginner" },
-  //     { skillValue: 4, text: "Intermediate" },
-  //     { skillValue: 5, text: "Expert" },
-  //     { skillValue: 4, text: "Pro" },
-  //   ];
-
-  const SkillLevel = [
-    { skillValue: "", text: "Select" },
-    { skillValue: "beginner", text: "Beginner" },
-    { skillValue: "INntermediate", text: "Intermediate" },
-    { skillValue: "Advance", text: "Advance" },
-  ];
-
-  const Role = [
-    { roleValue: 0, text: "Select" },
-    // { roleValue: 1, text: "Part Time" },
-    { roleValue: 2, text: "Full Time" },
-  ];
-  const typeOfResourceOption = resources.map((option) => {
-    return <option value={option.typeOfValue}>{option.text}</option>;
-  });
-  const skillLevelOption = SkillLevel.map((option) => {
-    return <option value={option.skillValue}>{option.text}</option>;
-  });
-  const roleOption = Role.map((option) => {
-    return <option value={option.roleValue}>{option.text}</option>;
+  const [fieldVal, setFieldVal] = useState({
+    resourceValue: "",
+    skillValue: "",
   });
 
-  const [resourceValue, setResourceValue] = useState("");
-  console.log("Resourse from handel resource change", resourceValue);
-  const [skillValue, setSkillValue] = useState("");
+  console.log("Fields value", fieldVal);
 
-  console.log("SkillValue", skillValue);
-  const [roleValue, setRoleValue] = useState("");
+  // console.log("Type of Resource", resourceValue);
+  // console.log("Skill Level", skillValue);
+  console.log("REsource allocate value", resVal);
+
   const [number, setNumber] = useState(1);
   const [total, setTotal] = useState(0);
 
+  const handelResourceChange = (e) => {
+    e.preventDefault();
+    setFieldVal({ ...fieldVal, [e.target.name]: e.target.value });
+
+    if (fieldVal.resourceValue === "Bookkeeping") {
+      if (fieldVal.skillValue === "Beginner") {
+        setResVal(600);
+      } else if (fieldVal.skillValue === "Intermediate") {
+        setResVal(800);
+      } else if (fieldVal.skillValue === "Advanced") {
+        setResVal(1000);
+      } else {
+        setResVal(0);
+      }
+    }
+
+    if (fieldVal.resourceValue === "Business Development") {
+      if (fieldVal.skillValue === "Beginner") {
+        setResVal(600);
+      } else if (fieldVal.skillValue === "Intermediate") {
+        setResVal(1000);
+      } else if (fieldVal.skillValue === "Advanced") {
+        setResVal(1600);
+      } else {
+        setResVal(0);
+      }
+    }
+
+    if (fieldVal.resourceValue === "Customer Service") {
+      if (fieldVal.skillValue === "Beginner") {
+        setResVal(500);
+      } else if (fieldVal.skillValue === "Intermediate") {
+        setResVal(650);
+      } else if (fieldVal.skillValue === "Advanced") {
+        setResVal(800);
+      } else {
+        setResVal(0);
+      }
+    }
+  };
+
+  const handelSkillChange = (value) => {
+    console.log("handelSkillChange", value);
+    setSkillValue(value);
+
+    if (value != "" && resourceValue === "Bookkeeping") {
+      if (value === "Beginner") {
+        setResVal(600);
+      } else if (value === "Intermediate") {
+        setResVal(800);
+      } else if (value === "Advanced") {
+        setResVal(1000);
+      } else {
+        setResVal(0);
+      }
+    }
+
+    if (value != "" && resourceValue === "Business Development") {
+      if (value === "Beginner") {
+        setResVal(600);
+      } else if (value === "Intermediate") {
+        setResVal(1000);
+      } else if (value === "Advanced") {
+        setResVal(1600);
+      } else {
+        setResVal(0);
+      }
+    }
+
+    if (value != "" && resourceValue === "Customer Service") {
+      if (value === "Beginner") {
+        setResVal(500);
+      } else if (value === "Intermediate") {
+        setResVal(650);
+      } else if (value === "Advanced") {
+        setResVal(800);
+      } else {
+        setResVal(0);
+      }
+    }
+  };
+
   useEffect(() => {
     handleCalculateCost();
-  }, [skillValue, resourceValue]);
+  }, [fieldVal.resourceValue, fieldVal.skillValue, number]);
+
+  const handleCalculateCost = () => {
+    const totalPrice = resVal * number;
+    setTotal(totalPrice);
+  };
+
   const increment = (e) => {
     e.preventDefault();
     if (number < 15) {
@@ -82,31 +140,6 @@ const Calculator = () => {
   const handelresourceChange = (e) => {
     // e.preventDefault();
     setResourceValue(e.target.value);
-  };
-
-  const handleCalculateCost = (e) => {
-    // e.preventDefault()
-    console.log("Inside calculate", skillValue.toLowerCase().trim());
-    console.log("Inside calculate resource", resourceValue);
-
-    if (skillValue === "beginer" && resourceValue === "Bookkeeping") {
-      setResourceValue(600);
-    } else if (
-      skillValue === "intermediate" &&
-      resourceValue === "Bookkeeping"
-    ) {
-      setResourceValue(800);
-    } else if (skillValue === "Advance" && resourceValue === "Bookkeeping") {
-      setResourceValue(1000);
-    } else {
-      setResourceValue(0);
-    }
-
-    const resourcePrice = resourceValue || 0;
-    const skillPrice = skillValue || 0;
-    const rolePrice = roleValue || 0;
-    const totalPrice = resourcePrice * skillPrice * rolePrice * number;
-    setTotal(totalPrice);
   };
 
   return (
@@ -137,32 +170,48 @@ const Calculator = () => {
               {" "}
               Calculate the cost of hiring remote employees{" "}
             </h1>
+
             <form className={`${styles.formTopic}`}>
               <div className={styles.fieldWrap}>
                 <label className={styles.label}>Type of Resource</label>
                 <select
                   className={`${styles.select}`}
-                  value={resourceValue}
-                  onChange={(e) => setResourceValue(e.target.value)}
-                  // onChange={(e) => setResourceValue(parseInt(e.target.value))}
+                  value={fieldVal.resourceValue}
+                  name="resourceValue"
+                  id="resourceValue"
+                  onChange={handelResourceChange}
+                  // onChange={(e) => setFieldVal.resourceValue(e.target.value)}
+                  // onChange={(e) => handelResourceChange(e.target.value)}
                 >
-                  {typeOfResourceOption}
+                  <option value="">-- Please Select --</option>
+                  <option value="Bookkeeping">Bookkeeping</option>
+                  <option value="Business Development">
+                    Business Development
+                  </option>
+                  <option value="Customer Service">Customer Service </option>
                 </select>
               </div>
               <br />
+
               <div className={styles.fieldWrap}>
                 <label className={styles.label}>Skill Level</label>
                 <select
                   className={`${styles.select}`}
-                  value={skillValue}
-                  //   onChange={(e) => setSkillValue(parseInt(e.target.value))}
-                  onChange={(e) => setSkillValue(e.target.value)}
+                  value={fieldVal.skillValue}
+                  name="skillValue"
+                  id="skillValue"
+                  onChange={handelResourceChange}
+                  // onChange={(e) => handelSkillChange(e.target.value)}
                 >
-                  {skillLevelOption}
+                  <option value="">-- Please Select --</option>
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
                 </select>
               </div>
               <br />
-              <div className={styles.fieldWrap}>
+
+              {/* <div className={styles.fieldWrap}>
                 <label className={styles.label}>Role</label>
                 <select
                   className={`${styles.select}`}
@@ -171,8 +220,9 @@ const Calculator = () => {
                 >
                   {roleOption}
                 </select>
-              </div>
+              </div> */}
               <br />
+
               <div className={styles.fieldWrap}>
                 <label className={styles.label}>Number of resource</label>
                 <span className={`${styles.select}`}>
