@@ -101,6 +101,11 @@
   padding: 10px 11px;
 }
 
+.select option{
+  padding: 20px 30px;
+  background: #f2f8f4;
+}
+
 span.select span {
   width: 53px;
   display: inline-block;

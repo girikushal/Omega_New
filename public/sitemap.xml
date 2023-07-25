@@ -3,37 +3,37 @@
     
     <url>
     <loc>http://localhost:3000/about-us</loc>
-    <lastmod>2023-07-03T14:05:39.024Z</lastmod>
+    <lastmod>2023-07-25T11:53:57.545Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:3000/careers</loc>
-    <lastmod>2023-07-03T14:05:39.024Z</lastmod>
+    <lastmod>2023-07-25T11:53:57.545Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:3000/contact-us</loc>
-    <lastmod>2023-07-03T14:05:39.024Z</lastmod>
+    <lastmod>2023-07-25T11:53:57.545Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:3000</loc>
-    <lastmod>2023-07-03T14:05:39.024Z</lastmod>
+    <lastmod>2023-07-25T11:53:57.545Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:3000/pricing-plan</loc>
-    <lastmod>2023-07-03T14:05:39.024Z</lastmod>
+    <lastmod>2023-07-25T11:53:57.545Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:3000/services</loc>
-    <lastmod>2023-07-03T14:05:39.024Z</lastmod>
+    <lastmod>2023-07-25T11:53:57.545Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
